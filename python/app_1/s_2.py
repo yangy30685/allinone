@@ -7,7 +7,8 @@ demo_source = requests.get('http://coreyms.com').text
 demo_soup = BeautifulSoup(demo_source, 'lxml')
 demo_article = demo_soup.find_all('article')
 
-dir_csv = 'C:\\Users\\lamborghni\\Documents\\GitHub\\allinone\\python\\app_1'
+# dir_csv = 'C:\\Users\\lamborghni\\Documents\\GitHub\\allinone\\python\\app_1'
+dir_csv = 'C:\\Users\\yangy\\Documents\\GitHub\\allinone\\python\\app_1'
 csv_file = open(dir_csv+'\\'+'demo_link.csv','w')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['headline','summary','link'])
