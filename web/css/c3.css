@@ -1,0 +1,453 @@
+* {
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+	list-style: none;
+}
+body {
+	background-color: #ccc;
+}
+h1 {
+	color:white;
+	text-align: center;	
+	height: 50px;
+	margin: 10px;
+}
+
+.divborder {
+	border:3px solid blue;
+}
+/* no space for same tag */
+div p[class="pClass"] {
+	
+	font-size:	26px;
+	font-weight: normal;
+	/*lighter/bolder/
+	normal/<interger> 100 200 ...900*/ 
+	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-align: center;
+	color: rgb(255,0,255);
+	/*cursive*/
+	border:3px solid green;
+	border-style: dashed;
+}
+
+.class_1 {
+	width: 0px;
+	height: 0px;
+	border: 200px solid blue;
+	border-color: transparent;
+	border-left-color: red;
+	border-bottom-color: black;
+	margin-bottom: 60px;
+}
+
+.class_2 {
+	margin:50px 80px;
+	border:2px dashed black;
+	font-size: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 50px;
+
+	text-indent: 2em;
+	line-height:2em;
+	height:2em;
+	overflow: hidden;
+	/*text-align: center;*/
+	text-decoration: line-through;
+}
+
+.del_1 {
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	text-decoration: overline;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.span_1:hover /*selector weight:1,0*/
+{
+	display: inline-block;
+	padding: 100px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration:overline;
+	color:rgb(255,255,255);
+	cursor: pointer;
+	background: black;
+	font-size: 40px;
+	border-radius: 10px;
+}
+
+.layout {	
+ 	margin: 30px auto;
+ 	padding: 0;
+ 	border: 2px dashed black;
+}
+.green {
+	background: green;
+}
+.red {
+	background:red;
+}
+.size1 {
+	width: 100px;
+	height: 100px;
+}
+
+.size2 {
+	width: 200px;
+	height: 200px;
+}
+
+.parent_ranger {
+	width: 400px;
+	height: 500px;
+	padding-top: 50px;
+	padding-left: 100px;
+	border:4px dashed black;
+	margin:30px auto;
+	background: blue;
+}
+
+.ranger {
+	padding: 20px;
+	width: 360px;
+	height: 460px;
+	font-size: 20px;
+	background: red;
+	text-align: center;
+}
+
+.aa5 {
+	width: 10px;
+	height: 10px;
+	background: black;
+}
+
+.aa4 {
+	width: 10px;
+	height: 10px;
+	padding: 10px;
+	background: white;
+}
+
+.aa3 {
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	background: black; 
+}
+
+.aa2 {
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	background: white;
+
+	/* this position is relate to the father tag */
+	position: absolute;
+	right: 30px;
+	/*use absolute to palce psotion with a parent relative */
+}
+
+.box_aa {
+	width: 70px;
+	height: 70px;
+	padding: 10px;
+	background:blue;
+	opacity: 0.5;
+
+	position: fixed;
+	left: 100px;
+	top: 100px;
+	/*use this position: as a reference */
+}
+
+
+.platform {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+
+	margin-left: -270px;
+	margin-top: -175px;
+	width: 540px;
+	height: 350px;
+	box-shadow: 5px 5px 10px black;
+
+	background: #ccc;
+	opacity:0.2;
+	z-index: 1;
+}
+
+.c1,.c2,.c3,.c4,.c5 {
+	width: 200px;
+	height: 200px;
+	border:10px solid purple;
+	border-radius: 50%;
+}
+
+.c1 {
+	position: absolute;
+	border-color: blue;
+	z-index: 1;
+}
+
+.c2 {
+	position: absolute;
+	border-color: white;
+	left: 75%;
+	top:-10px;
+	z-index: 2;
+}
+.c3 {
+	position: absolute;
+	border-color: orange;
+	left: 75%;
+	top:-10px;
+	z-index:1;
+}
+.c4 {
+	position: absolute;
+	
+	bottom:0; 
+	left: 80px;
+	z-index:0; 
+}
+.c5 {
+	position: absolute;
+	border-color: red;
+	top:-10px;
+	left: 75%;
+	z-index: 1;
+}
+
+.right {
+	/* relate to window */
+	position: absolute;
+	right: 0;
+	background: black;
+	opacity: 0.3;
+
+	width: 100px;
+	height: 100px;
+}
+
+.left {
+	height: 100px;
+	background: blue;
+	margin-right: 150px;
+}
+
+#menu li{
+	float: left;
+	padding: 20px;
+	width: 30px;
+	height: 10px;
+	background-color:red;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 10px;	
+}
+#menu li:hover {
+	cursor: pointer;
+}
+
+.bug1 {
+	margin-left: 100px;
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	background: gold;
+	
+	/* overflow: hidden; */
+	
+	/*fix bug
+	position: absolute;
+	display: inline-block;
+	overflow: hidden;
+	*/
+}
+
+.bug2 {
+	border: 2px solid black;
+	margin-left: 40px;
+	/* this setting is a bug!!!! */
+	margin-top: 20px;
+	width: 50px;
+	height: 50px;
+	background: red;
+}
+
+.anotherbug1 {
+	background-color: red;
+	font-size: 20px;
+
+	/* margin bot is not working properly
+	if next box tag has margin top setting */
+	margin-bottom: 20px;
+
+}
+.anotherbug2 {
+	background-color: blue;
+	font-size: 2em;
+	margin-top: 30px;
+	/*the defaul 1em is 16px;*/
+}
+
+.wrapper {
+	height: 200px;
+	margin-top: 50px;
+	border:4px dashed black;
+}
+
+.content {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	box-shadow: 10px 10px 10px black;
+
+	font-size: 2em;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;	
+	
+
+	background-color: rgb(0, 247, 255);
+	color: black;
+	opacity: 0.8;		
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: red;
+	font-size: 30px;
+}
+
+.wrapper::after {
+	clear: both;
+	display: block;
+	content: "demo for clear in after";
+}
+
+.menu_nav {
+	list-style:none;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-width: 950px;
+	margin: 30px 20px;
+	
+	border: 2px solid red;
+	z-index: 101;
+}
+
+.list-item {
+	width: 150px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	margin: 0 auto;
+	float: left;
+}
+
+.list-item a {
+	display: inline-block;
+	border: 2px solid black;
+	width: 150px;
+	height: 80px;
+
+	text-align: center;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#424242;
+	font-size: 30px;
+	font-weight: bold;	
+	z-index: 102;
+}
+
+.list-item a:hover {
+	border-radius:10px;
+	background:#f40;
+	color:#fff;
+}
+
+.single-line {
+	width: 300px;
+	height: 40px;
+	color: blueviolet;
+	font-size: 20px;
+	line-height: 20px;
+	border: 1px solid black;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 40px;
+}
+
+.image_001 {
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	margin: 30px;
+	border: 1px solid black;
+	background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");  
+	background-repeat:no-repeat;
+	background-position:center center;
+	/* display when css is not loaded */
+	text-indent:-600px;
+	overflow: hidden;
+}
+
+.outer {
+	height: 100px;
+	background: blue;
+	padding: 10px;
+}
+
+.inner {
+	width: 800px;
+	margin:10px auto;
+	height: 80px;
+	background: white;
+	opacity: 0.6;
+}
+
+.demo_align {
+	display: inline-block;
+	height: 50px;
+	width: 200px;
+	background:red;
+	font-size: 40px;
+	vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

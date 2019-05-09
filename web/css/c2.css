@@ -1,0 +1,120 @@
+#a {
+	color:#f40;
+}
+#b {
+	height:100px;
+	width:100px;
+	background-color:red;
+}
+ul {
+	/*the default left margin:40px;
+	padding:0;
+	*/
+	list-style-type:none;	
+}
+ul em {
+	display:block;
+	margin:10px;
+}
+ul li {
+	float:left;
+	margin:0px 10px;
+	color:#f40;
+	font-size:16px;
+	font-weight:bold;
+	height:40px;
+	line-height:40px;
+	padding:0 10px;
+}
+ul li:hover {
+	background-color:#f40;
+	color:#fff;
+	border-radius:15px;
+}
+.clear {
+	clear:both;
+}
+
+#image_1 {
+	display:block;
+	margin: 0px auto;
+	height:80px;
+}
+
+#d {
+	display:block;
+	margin:0 auto;
+	width:800px;
+	height:200px;
+	background-color:gray;
+	text-align:center;
+}
+
+a .nav {
+	display:inline-block;
+	border:2px solid black;
+	width:100px;
+	height:100px;
+	background-color:#fcc;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+}
+
+form  {
+	display:inline-block;
+	padding:0px;
+	width: 229px;
+	margin:0 30px;
+}
+.optinal {
+	max-width:200px;
+	margin:20px auto;
+}
+
+.button1 {
+	margin:0px 50px;
+}
+
+#e {
+	color:red;
+	margin:50px;
+}
+
+#e .optional
+{ 
+	margin:30px 50px;
+	border:2px solid black;
+	height: 58px;
+	width:21px;
+}
+
+.check_box {
+	font-size:40px;
+	font-weight:bold;
+	color:#000
+}
+
+
+#f {
+	margin:50px 200px;
+}
+
+
+[id] {
+	background-color:black;
+}
+
+[id="phantom_assassin" ]
+{
+	background-color:blue!important;
+}
+
+/*demo of 2 levles of container */
+div>em {
+	color:red;
+}
+
+div.demo {
+color:red;
+}

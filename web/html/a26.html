@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="javascirpt tutorials">
+    <meta name="author" content="yangspot.com">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> 
+    
+    <title>yangspot.com</title>
+    <link type="text" rel="shortcut icon" href="../src/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .show { 
+            display: inline !important;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function openAlert(message) {
+            alert(message);
+        }
+    </script>
+
+    <section class="container-fluid">
+        <a class="h3" href="JavaScript:void(0)" onclick="alert('Hello');">Stop reload using javascript:void(0)</a><br>
+        <a class="h3" href="JavaScript:void(0)" onclick="openAlert('Using a input function');">Call js funciton</a><br>
+    </section>
+
+    <hr>
+
+    <section class="container-fluid">
+        <input type="text" id="randInput" onChange="const dataEnter=document.getElementById('randInput').value;
+            openAlert('user typed: '+ dataEnter)">   
+    </section>
+    <script>
+        document.getElementById("randInput").onfocus = function(event) {
+            this.style.backgroundColor = "red";
+            this.style.color = "white"
+        }
+        document.getElementById("randInput").onblur = function(event) {
+            this.style.backgroundColor = "";
+        }
+    </script>
+
+    <hr style="height: 5px; background: red;border: black dashed;">
+
+    <div style="margin-left:2rem;">
+        <form action="#" id="sampForm">
+            <input type="text" id="charInput" size="40" autocomplete="off">
+            <p id="keyData">Key Data Here</p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    
+    <hr style="height: 5px; background: red; border: black dashed;">
+
+    <div>
+        <img  id="logo" style="width: 300px; margin: 2rem;" src="../src/donate.JPG" alt="">
+        <button id="logoButton">Get logo</button>
+        <input type="text" id="mouseInput" size="40"><br>
+        <span style="margin: 1rem">Mouse X: <input type="text" id="mouseX"></span>
+        <span style="margin: 2rem">Mouse Y: <input type="text" id="mouseX"></span>
+    </div>
+
+    <script>
+        function getChar(event) {
+            if (event.which == null) {
+                return String.fromCharCode(event.keyCode);
+            } else if (event.which != 0 && event.charCode != 0) {
+                return String.fromCharCode(event.which);
+            } else {
+                return null;
+            }
+        }
+
+        document.getElementById("charInput").onkeypress = function(event) {
+            const charDemo = getChar(event || window.event) 
+            if(!charDemo) return false;
+            document.getElementById("keyData").innerHTML = charDemo + " was clicked";
+            return true;
+        }
+
+        document.getElementById("charInput").onfocus = function(event) {
+            document.getElementById("keyData").innerHTML = "input gained focus";
+        }
+
+        document.getElementById("logoButton").onclick = function(event) {
+            document.getElementById("logo").className = "show";
+        }
+
+        document.getElementById("logo").onclick = function(event) {
+            document.getElementById("logo").className = "hidden";
+        }
+
+        document.getElementById("logo").onmouseover = function(event) {
+            document.getElementById("logo").src = "../src/large_icon.jpg";
+            document.getElementById("mouseInput").value = "Mouse Over";
+        }
+
+        document.getElementById("logo").onmouseout = function(event) {
+            document.getElementById("logo").src = "../src/donate.JPG";
+            document.getElementById("mouseInput").value = "mouse out";
+        }
+
+    </script>
+
+    <hr>
+
+
+
+
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</body>
+</html>

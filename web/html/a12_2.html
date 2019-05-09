@@ -1,0 +1,138 @@
+<!Doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>yangspot.com</title>
+    <link rel="icon" href="../src/favicon_2.ico">
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            vertical-align: top;
+        }
+        body {
+            background: url("../src/post_02.jpg") no-repeat;
+            background-size: cover;
+        }
+        .small {
+            width: 50px;
+            height: 50px;;
+        }
+        .large {
+            width: 250px;
+            height: 250px;
+        }
+        #box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -125px;
+
+            padding-top: 250px;
+            border: 2px solid white;
+            width: 250px;
+            height: 50px;
+
+            background: url("../src/i_01.png") no-repeat;
+        }
+        #ul_1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+
+    <div id="box">
+        <ul id="ul_1">
+            <li><img class="small" src="../src/i_01.png" alt=""></li>
+            <li><img class="small" src="../src/i_02.png" alt=""></li>
+            <li><img class="small" src="../src/i_03.png" alt=""></li>
+            <li><img class="small" src="../src/i_04.png" alt=""></li>
+            <li><img class="small" src="../src/i_05.png" alt=""></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+            var box = document.getElementById("box");
+            
+            // limite range of li
+            var all_li = box.getElementsByTagName("li");
+            
+            // console.log(all_li)
+            // console.log(all_li)
+            for (var i = 0; i < all_li.length; ++i) {
+                
+                // note : asynchronous 
+                var li_iteam = all_li[i];
+                
+                //add a attribute
+                li_iteam.index = i+1;
+                
+                //create event
+                li_iteam.onmouseover = function() {
+                    box.style.background = 'url("../src/i_0' + this.index + '.png") no-repeat';
+                }
+            }
+    </script>
+    
+   <!-- another demo -->
+    <style>
+        #poster {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        #poster ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;    
+        }
+
+        #poster ul li img {
+            width: 120px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div id="poster">
+        <ul id="ul_2">
+            <li><img src="../src/post_01.jpg" alt="pic_1"></li>
+            <li><img src="../src/post_02.jpg" alt="pic_2"></li>
+            <li><img src="../src/post_03.jpg" alt="pic_3"></li>
+            <li><img src="../src/post_04.jpg" alt="pic_4"></li>
+            <li><img src="../src/post_05.jpg" alt="pic_5"></li>
+        </ul>
+    </div>
+
+    <script>
+        var poster = document.getElementById("poster");
+        
+        //limite scope of li
+        var li_iteam = poster.getElementsByTagName("li");  
+
+        var target_body = document.getElementsByTagName("body"); 
+            
+        for (var i = 0; i < li_iteam.length; ++i) {
+            
+            var temp = li_iteam[i];
+
+            //add an attributes
+            //this is necessary to avoid asynchronous
+            temp.index = i+1;
+
+            temp.onclick = function() {
+                target_body[0].style.background = 'url("../src/post_0' + this.index + '.jpg") no-repeat';
+                target_body[0].style.backgroundSize = "cover";                
+            }
+        }
+    </script>
+</body>  
+</html>

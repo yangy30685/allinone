@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>yangspot.com</title> 
+</head>
+<body onload="draw();">
+    <canvas id="canvas" width="600" height="600">
+        An alternative text describing what your canvas displays. 
+    </canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById('canvas');          
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+            }
+            ctx.fillStyle = 'rgb(255, 255, 0)';
+            ctx.fillRect(20, 20, 100, 100);
+            ctx.fillStyle = 'rgba(0, 0, 255, 0.2)';
+            ctx.fillRect(80, 80, 50, 50);
+        }
+    </script> 
+    <style type='text/css'>
+        canvas {
+            border: 2px dotted black;
+        }
+    </style>  
+</body>
+</html>

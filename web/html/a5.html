@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>yangspot.com</title>
+	<link rel="shortcut icon" href="../src/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/c2.css"/>
+</head>
+<body>
+	<div id="a">
+		<strong style="display:block">aa</strong>
+		<em>bb</em>
+		<del>cc<del>
+	</div>
+	
+	<div id="b">this is a co<br>
+		nt&nbsp;aine&nbsp;rth
+		<del>&lt;</del>
+		sisacontainerthisisacontainer
+		<strong>space</strong>
+		hisisacontainethisisacontainer
+	</div>
+	
+	<ol type = "a" reversed = "reversed" start = "2">
+	<!-- default type is 1 /a/A/i/I-->
+		<li>marvel</li>
+		<li>marvel111</li>
+		<li>marvel222</li>
+		<li>marvel333</li>
+	</ol>
+		
+	<ul type="circle">
+		<!--the default is disc /circle/-->
+	<em>this is title</em>
+		<li>apple</li>
+		<li>orange</li>
+		<li>eddos</li>
+		<li>asparagus</li>
+	</ul>
+
+	<div class = "clear">
+		<img id = "image_1" src ="http://www.baidu.com/img/bd_logo1.png?where=super" alt="baidu log" title="baidu"/>
+	</div>
+
+	<a id="d" href="http://www.baidu.com" target="_blank">demo</a>
+	
+	<a href="#a"><div class="nav">Back Top</div></a>	
+
+	<a href="javascript:while(1){ alert(':D'); }">link</a>
+
+	<form method="get" action="#">
+	
+	<p>username:<input 
+	name="user_name" 
+	type="text" 
+	value="input user name" 
+	style="color:blue" 
+	onfocus="if(this.value=='input user name'){ this.style.color='red';this.value=''}" 
+	onblur="if(this.value==''){this.value='input user name';this.style.color='blue';}" />
+	</p>
+	<p>password:<input name="password" type="password"/>
+	</p>
+		
+	<div>
+		<input class="button1" type="submit" value="Confirm"/>
+		
+		<input type="radio" value="aaa" />
+	</div>
+	
+	</form>
+
+	<form id="e">
+		A demo of form
+		<div class="optional">
+			<input name="unique" type="radio" value="1" />
+			<input name="unique" type="radio" value="2" />
+			<input name="unique" type="radio" value="3" />
+		</div>
+
+
+		<div class="check_box">
+			no.1<input name="unique" type="checkbox" value="1" checked="checked">
+			no.2<input name="unique" type="checkbox" value="2">
+			no.3<input name="unique" type="checkbox" value="3" checked="checked">
+			<input type="submit">
+		</div>
+	</form>
+
+	<hr>
+	<div id="f">	
+	<form method="get" action="#">
+		<select name="abc">
+			<option value="a">aa</option>
+			<option value="b">bb</option>
+			<option value="c">cc</option>
+			<input type="submit" />
+		</select>
+	</form>
+	</div>
+
+	<div style="width:100px;height:200px;background-color:green;padding:50px;text-align:center;">
+			demo=>inline css
+	</div>
+	
+
+	<style type="text/css">
+		
+		#g
+		{
+			width:800px;
+			height:200px;
+			background-color: yellow;
+			margin:50px auto;
+		}
+		#g ul
+		{
+			width:420px;
+			height: 200px;
+			margin: 10px auto;
+		}
+		
+		#g ul li{
+			width: 100px;
+			height: 100px;
+			margin: 10px a;
+			padding: 10px;
+			border-radius: 50%;
+			text-align: center;
+			background-color: powderblue;
+			font-size: 18px;
+		}
+	</style>
+
+	<div id="g">
+			<ul>
+				<li>id </li>
+				<li>class</li>
+				<li>html tag</li>
+			</ul>
+	</div>
+	 
+	 <style type="text/css">
+	 	
+	 	#phantom_assassin
+	 	{
+	 		background-color: black; 
+
+	 	}
+	 	.only
+	 	{
+	 		background-color: yellow;
+	 		color:#f40; 
+	 		/*font-size: 16px;*/
+	 		text-align: center;
+	 	}
+	 
+	 </style>
+
+	<div id="phantom_assassin" class="only only_1">		
+		default font size is 16px;<br/>
+		height 18px;<br>
+		inline>id>class>tag<br/>
+	If the element has inline styling, that automatically1 wins (1,0,0,0 points)For each ID value, apply 0,1,0,0 points
+	For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points
+	For each element reference, apply 0,0,0,1 point
+	</div>
+
+	<div>
+		<em>
+			1st level
+		</em>
+		<strong>
+			<em>2nd level</em>
+		</strong>
+
+	</div>
+
+	<!-- the selectors  -->
+	<div>1</div>
+	<div class="demo">2</div>
+	<p class="demo">3</p>
+
+
+</body>
+</html>

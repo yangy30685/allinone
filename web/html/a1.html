@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang = "en">
+    
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+	<meta name = "author" content = "DrYang">
+	
+	<title>yangspot.com</title>
+    <link rel="shortcut icon" href = "../src/favicon_2.ico">
+</head>
+
+<body style = "background: black">
+	
+	<!-- call a script from another file -->
+	<script type = "text/javascript" src = "../js/j2.js"></script>
+
+	<hr style ='border: 2px dotted white; height: 5px;; margin: 20px;'>
+	
+	<style>
+		label {
+			background-color: white;
+			color: black;
+			padding: 5px;
+			margin-right: 10px; 
+			font-family: Arial, Helvetica, sans-serif; 
+			font-weight: bolder;
+			font-size: 2em;
+		}
+
+		#scoreInput {
+			height: 40px; 
+			width: 180px;
+			font-size: 2em;
+			padding: 5px;
+			border: 2px solid red;
+		}
+
+		#prompt {
+			font-size: 2em;
+			font-family: Arial, Helvetica, sans-serif; 
+			font-weight: bolder;
+			display: inline-block;
+			line-height: 40px;
+			background-color: white;
+			color: black;
+		}
+
+		.right {
+			color: lightgreen !important;
+			padding-left: 45px;
+			background: url("../src/correct.png") no-repeat;
+			background-size: 40px 40px;
+		}
+
+		.error {
+			color: red !important;
+			padding-left: 45px;
+			background: url("../src/error.png") no-repeat;
+			background-size: 40px 40px;
+		}
+
+	</style>
+	
+	<div id = 'box'>
+		<label>ScoreInput: </label>
+		<input id = "scoreInput" type = "text" placeholder = "e.g. 99">
+		<span id = "prompt" >input a score!</span>
+	</div>
+
+	<hr style = 'border: 2px dotted white; height: 5px;; margin: 20px;'>
+	
+	<h1 style = "color: red; text-align: center;background-color: #fff;">press f12 for console details</h1>
+
+	<script>
+		window.onload = function() {		
+			// onblur
+			$('scoreInput').onblur = () => {
+				
+				//get tag
+				var value = parseFloat($('scoreInput').value);
+
+				// judege if it is a proper number
+				if (isNaN(value)) {
+					// $('prompt').innerText = "the scoreInput is not a number!";
+					// $('prompt').className = "error";
+					// $('scoreInput').style.borderColor = "red";
+
+					dealStyle ("the score is not a number!", "error", "red");
+
+				} else if ( value >= 0 && value <= 100) {
+					// $('prompt').innerText = "correct!";
+					// $('prompt').className = "right";
+					// $('scoreInput').style.borderColor = "lightgreen";
+					dealStyle ("correct!", "right", "lightgreen");
+				} else {
+					// $('prompt').innerText = "scoreInput must be >=0 and  <= 100 !";
+					// $('prompt').className = "error";
+					// $('scoreInput').style.borderColor = "red";
+
+					dealStyle ("scoreInput must be >=0 and  <= 100 !", "error", "red");
+				}
+
+				// onfocus
+				$('scoreInput').onfocus = () => {
+					// $('prompt').innerText = "input ur scoreInput";
+					// $('prompt').className = "";
+					// $('scoreInput').style.borderColor = "darkgray";	
+					
+					dealStyle ("input ur scoreInput", "", "darkgray");
+
+					$('scoreInput').style.outline = "";
+					$('scoreInput').value = "";
+
+				}
+			}
+			
+			function dealStyle (msg, className, color) {
+				$('prompt').innerText = msg;
+				$('prompt').className = className;
+				$('scoreInput').style.borderColor = color;
+			}
+			
+			function $(id) {
+				return typeof(id) === 'string' ? document.getElementById(id) : null;
+			}
+		}
+	</script>
+</body>
+</html>

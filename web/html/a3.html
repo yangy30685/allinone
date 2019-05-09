@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dr_Yang_Studio</title>
+	
+	<!--script in head-->
+	<script type="text/javascript">
+
+		// this is a comment inside javascript
+		// defina a function and use this funciton to change a line with id = idname used in another script
+		function but_1() {
+				document.getElementById("idname").innerHTML = "New lines";
+            }
+        function but_2() {
+				document.getElementById("idname").innerHTML = "back to origin";
+			}
+	</script>
+</head>
+<body>
+
+	<!--javascript from external file-->
+	<script type="text/javascript" src=../js/j1.js></script>
+    
+    <p>start</p>
+    <hr style="border-color:red">
+    
+    <!--script in body-->
+	<script type="text/javascript">
+		document.write("<h1>this is a header</h1>");
+		document.write("<p id='idname'>This is a paragraph</p>");	
+	</script>
+
+	<button type="button" onclick="but_1()">Press</button>
+    <button type="button" onclick="but_2()">Press again</button>
+
+	<!-- this is script for console -->
+	<script type="text/javascript"> 
+   		const _var = 1;     
+   		console.log(_var);
+	</script>
+
+</body>
+</html>

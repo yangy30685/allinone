@@ -1,0 +1,10 @@
+* {margin: 0; padding: 0; list-style: none; text-decoration: none}
+body {background: gray; color: white; font-size: 2em; padding: 5%}
+ul {display: flex; vertical-align: top}
+#demo_album {width: 800px; border: 2px solid aqua; padding: 20px; background-color: black}
+#large_pic_title { box-sizing: border-box; width: 200px; height: 80px; line-height: 60px; font-size: 50px; text-align: center; border: 2px solid red}
+.show {width: 700px; margin-top: 1em; border: 2px dashed greenyellow; box-shadow: 10px 10px 5px blue}
+.small_pic {margin: 10px; width: 100px; border: 2px dotted black; box-shadow: 10px 10px 5px white}
+
+.full_pic {width: 800px; margin-top: 0; border: 2px dashed greenyellow; }
+.dismiss {display: none}

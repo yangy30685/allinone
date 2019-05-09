@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  initial-scale=1 for iphone、ipad，width=device-width for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- enable ie8 use google chrome frame -->
+    
+    <title>yangspot.com</title>
+    <link rel="shortcut icon" href="../src/favicon.ico">
+
+    <style type="text/css"> 
+        /* inner css style */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #tab {
+            width: 498px;
+            height: 120px;
+            border: 1px solid gray;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        /* tab header */
+        #tab_header {
+            background-color: gray;
+            font-size: 18px;
+            height: 28px;
+            line-height: 28px;
+        }
+        #tab_header ul {
+            width: 500px;
+            /* display: flex;
+            justify-content: space-around;
+            align-items: center; */
+        }
+        #tab_header ul li {
+            float: left;
+            width: 98px;
+            padding: 0 1px;
+            text-align: center;
+            border-bottom: 1px solid gray; 
+          
+        }
+        #tab_header ul li.selected {
+            background-color: #fff;
+            border-bottom: none;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            padding: 0;
+        }
+        #tab_header ul li:nth-child(1) {
+            border-left: none;
+        }
+
+        #tab_header ul li:nth-last-child() {
+            border-right: none;  
+        }
+        #tab_header ul li:hover {
+            font-weight: bolder;
+            color: orangered;
+            cursor: pointer;
+        }
+
+        /* tab content */
+        #tab_content .dom {
+            padding-top: 20px;
+            display: none;
+        }
+
+        #tab_content .dom ul li {
+            float: left;
+            width: 220px;
+            text-align: center;
+            margin: 5px;  
+        }
+        #tab_content .dom ul li:hover {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            var allLis =$("tab_header").getElementsByTagName("li");
+            var allDom=$("tab_content").getElementsByClassName("dom");
+
+            // console.log(allDom);
+
+            for (var i=0; i<allLis.length; i++) {
+                var li = allLis[i];
+               
+                li.index = i;// create ojb attribute index
+                li.onmouseover = function () {
+                    for (var j=0; j<allLis.length; j++) {
+                        allLis[j].className = "";
+                        allDom[j].style.display = "";
+                    } 
+
+                    this.className = "selected";
+                    allDom[this.index].style.display = "block";
+                }
+            }
+        }
+
+        function $(id) {
+            return typeof id === "string" ? document.getElementById(id) : null;
+        }
+    </script>
+
+    <div id="tab">
+        <!-- header -->
+        <div id="tab_header">
+            <ul>
+                <li class="selected">notice</li>
+                <li>rules</li>
+                <li>bbs</li>
+                <li>charity</li>
+                <li>user</li>
+            </ul>
+        </div>
+
+        <!-- content -->
+        <div id="tab_content">
+
+            <div class="dom" style="display: block;">
+                <ul>
+                    <li><a herf="#">aaaaaaaaaaaaaaaa</a></li>
+                    <li><a herf="#">bbbbbbbbbbbbbbbb</a></li>
+                    <li><a herf="#">cccccccccccccccc</a></li>
+                </ul>
+            </div>
+
+            <div class="dom">
+                <ul>
+                    <li><a herf="#">dddddddddddddddd</a></li>
+                    <li><a herf="#">eeeeeeeeeeeeeeee</a></li>
+                    <li><a herf="#">ffffffffffffffff</a></li>
+                </ul>
+             </div>
+
+            <div class="dom">
+                <ul>
+                    <li><a herf="#">gggggggggggggggg</a></li>
+                    <li><a herf="#">hhhhhhhhhhhhhhhh</a></li>
+                    <li><a herf="#">jjjjjjjjjjjjjjjj</a></li>
+                </ul>
+            </div>
+
+            <div class="dom">
+                <ul>
+                    <li><a herf="#">aaaaaaaaaaaaaaaa</a></li>
+                    <li><a herf="#">bbbbbbbbbbbbbbbb</a></li>
+                    <li><a herf="#">cccccccccccccccc</a></li>
+                </ul>
+            </div>
+
+            <div class="dom">
+                <ul>
+                    <li><a herf="#">aaaaaaaaaaaaaaaa</a></li>
+                    <li><a herf="#">2222222222222222</a></li>
+                    <li><a herf="#">cccccccccccccccc</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>  
+</body>
+</html>

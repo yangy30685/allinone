@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yangspot.com</title>
+    <link rel="shortcut icon" href="../src/favicon_2.ico">
+    <style>
+        *{ margin: 0; padding: 0; list-style: none; text-decoration: none}
+        body{ background: black; color: white; font-size: 26px}
+        .main{ margin: 10rem; padding: 5rem; border: 2px dotted white; text-align: center;}
+        .btn{ font-size: 1em; display: inline-block; width: 150px; padding: .5em; border-radius: 5px; box-shadow: 10px 10px 15px gray}
+        .btn:last-child{ margin-left: 2em;}
+        @media screen and (max-width:880px) {
+            .main {min-width: 220px; padding: 5px; margin: 0.5em}
+            .btn:last-child { margin-top: 1em; margin-left: 0}
+        }
+    </style>
+</head>
+<body>
+    <div id="demo_change" class="main">
+        <img id="show_area" name="img" src="../src/i_02.png" alt=""><br>
+        <button id="previous" class="btn">previous</button>
+        <button id="next" class="btn">next</button>		
+    </div>   
+    <script src="../js/j9.js"></script>
+</body>
+</html>

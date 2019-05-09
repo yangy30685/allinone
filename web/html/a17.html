@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yangspot.com</title>
+    <link href="../src/favicon_2.ico" rel="shortcut icon">
+
+    <!-- <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"> -->
+</head>
+<body>
+    <!-- demo -->
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+        hr {
+            border: 2px dotted white;
+            height: 5px;;
+            margin: 20px;
+        }
+        a {
+            color: yellow
+        }
+        a:hover {
+            color: white;
+            background-color: red;
+        }      
+    </style>
+
+    <p><a href="#">A simple link</a></p>
+
+    <hr>
+    
+    <label style="font-size: 1em">Input here</label>
+    <input style="font-size: 2em; height: 2em;" id="name" type="text" placeholder="A red placeholder text..">
+        <script>
+            window.onload = function () {
+                const name = document.getElementById('name');
+                    name.onfocus = function () {
+                        this.style.color = 'blue'
+                    }
+                    name.onblur = function () {
+                        this.style.color = 'red'
+
+                    }
+            }
+        </script>
+
+    <hr>
+
+    <style>
+        dl {
+            margin: 10px;
+            border: 1px solid   white;
+            color: aqua
+        }
+        dt {
+            line-height: 2em;
+            font-size: 2em;
+            text-indent: 4em;
+        }
+        dd{
+            margin: 0
+        }
+    </style>
+
+    <dl>
+        <dt>Humous</dt>
+        <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+        <dt>Pitta</dt>
+        <dd>A soft, slightly leavened flatbread.</dd>
+        <dt>Halloumi</dt>
+        <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+        <dt>Green salad</dt>
+        <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+    </dl>
+
+    <hr>
+
+    <style>
+        .wrapper {
+            display: flex;
+            font-size: 2rem;
+            background-color: white;
+            color: black;
+        }
+        .wrapper > div {
+            flex: 1;
+            background: red;
+            margin: 10px;
+        }
+    </style>
+
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+    </div>
+
+    <hr>
+
+    <style>
+    .wrapper2 {
+            position: relative;
+            border: 2px dashed white;
+            padding: 45px;
+        }
+    .wrapper2 > p {
+            background: red;
+            border: 3px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+     
+    .wrapper2 :nth-child(4) {
+            top: 10px;
+            left: 10px;
+            position: absolute;
+            background: gray;
+        }
+    </style>
+
+    <div class="wrapper2">
+        <h1>relative-absolute 1</h1>
+        <h2>head 2</h2>
+        <p>I am a basic block level element. 3</p>
+        <p>I am a basic block level element. 4</p>
+        <p>I am a basic block level element. 5</p>
+    </div>
+
+    <hr>
+
+    <style>
+        .wrapper3 {
+            border: 1px solid white;
+            background: blue;
+        }
+       .wrapper3 div {
+           background: black;
+            text-align: right;
+            width: 600px;
+            right: 60%;
+        }
+        .wrapper3 div input,label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;;
+            margin: 10px;
+            width: 330px;   
+        }
+    </style>
+
+    <form class="wrapper3">
+        <p>First of all, tell us your name and age.</p>
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" placeholder="yangspot.com">
+        </div>
+        <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" placeholder="yangspot.com">
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" placeholder="e.g. 18">
+        </div>
+    </form>
+    
+    <hr>
+
+    <style>
+        .wrapper4 {
+            padding: 1em;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr ;
+            grid-template-rows: 100px 1fr 1fr;
+            grid-gap: 1em;  
+          
+            background-color: red;
+        }
+        .wrapper4 > div {
+            border-radius: 5px;
+            background-color: rgb(207,232,220);
+            font-size: 3em;
+            line-height: 2em;
+        }
+    </style>
+
+    <div class="wrapper4">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+        <div class="box5">Five</div>
+        <div class="box6">Six</div>
+    </div>
+
+    <hr>
+
+    <style>
+        .container {
+            color: black;
+            margin: 2em;
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 4px dotted rgb(79, 185, 227);
+        }
+        .card {
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
+            padding: 10px;
+            margin: 0 0 1em 0;
+            page-break-inside: avoid
+        }
+        .container .card :last-child {
+            color: yellow;
+            background:red;
+        }
+        .container .card:last-child {
+            color: white;
+            background:blue;
+        }
+    </style>
+
+    <div class="container">
+        <div class="card">
+          <h2>I am the heading 111</h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integligula ipsum, tristique sit amet orci vel, viverra egestas ligula.</p>
+          </div>
+      
+          <div class="card">
+            <h2>I am the heading222</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integligula ipsum, tristique sit amet orci vel, viverra egestas ligula.</p>
+          </div>
+      
+          <div class="card">
+            <h2>I am the heading333</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integligula ipsum, tristique sit amet orci vel, viverra egestas ligula.</p>
+          </div>
+          <div class="card">
+            <h2>I am the heading444</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integligula ipsum, tristique sit amet orci vel, viverra egestas ligula.</p>
+          </div>
+      
+          <div class="card">
+            <h2>I am the heading555</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integligula ipsum, tristique sit amet orci vel, viverra egestas ligula.</p>
+          </div>
+    </div>
+
+    <hr>
+
+    <style>
+        table {
+            border: 1px solid blue;
+            margin: 0 auto;
+            font-size: 2vw;
+        }
+        /* Select the last three elements */
+        tr:nth-child(1) {
+            background-color: lime;
+        }
+        tr:nth-last-child(2) {
+            background-color: red;
+        }
+        tr :only-child {
+            background-color: cyan;
+        }
+    </style>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>First line</td>
+                <td>aaaa</td>
+            </tr>
+            <tr>
+                <td>Second line</td>
+                <td>bbbb<span> only child</span></td>
+            </tr>
+            <tr>
+                <td>Third line</td>
+                <td>cccc</td>
+            </tr>
+            <tr>
+                <td>Fourth line</td>
+                <td>dddd<span> onyl child</span></td>
+            </tr>
+            <tr>
+                <td>Fifth line</td>
+                <td>eeee</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr>
+   
+
+    
+
+
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>  -->
+</body>
+</html>

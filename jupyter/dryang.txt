@@ -1,0 +1,9 @@
+'''
+this is a comment 
+it will be written into txt as well
+'''
+hello python
+simple is beautiful
+endthis is another line
+this 2nd line
+this 3rd line

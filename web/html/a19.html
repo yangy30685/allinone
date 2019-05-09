@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yangspot.com</title>
+    <link rel="shortcut icon" href="../src/favicon_2.ico">
+</head>
+<body>
+    <style>   
+    * {   
+        margin:0;   
+        padding:0;   
+    }   
+    ul {     
+        height: 4em; 
+        background-color: black;  
+        border: 2px solid red;
+        
+    }   
+    ul li {   
+        float:left;   
+        list-style: none;   
+        background-color:lightblue;   
+        width: 10%;
+        font-size: 1.5em;   
+        line-height: 2em;  
+    }   
+    .item {   
+        display: inline-block;   
+        text-align:center;   
+        transition: all .3s;   
+        -webkit-transition: all .3s; /* Safari 和 Chrome */  
+        cursor: pointer;     
+    }   
+    .item:hover {   
+        background-color:black;
+        color:white;    
+    }   
+
+    @media screen and ( max-width: 640px)  { 
+        ul {
+            height: 50%;
+            overflow: hidden;
+        }  
+        ul li {             
+            margin: 10px 10%;
+            width: 50%;
+            background-color: aqua;  
+        }
+        .item {
+            width: 50%;
+        }   
+    }   
+    </style>    
+
+    <ul class="ul">   
+        <li><a class="item">Home</a></li>   
+        <li><a class="item">First</a></li>   
+        <li><a class="item">Second</a></li>   
+        <li><a class="item">Thirdly</a></li>   
+        <li><a class="item">Fourth</a></li>   
+    </ul>
+    
+    
+</body>
+</html>
