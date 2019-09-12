@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 import os
 
 # dir = 'C:\\Users\\lamborghni\\Documents\\GitHub\\allinone\\python\\app_1\\simple.html'
-dir = 'C:\\Users\\yangy\\Documents\\GitHub\\allinone\\python\\app_1\\simple.html'
+# dir = 'C:\\Users\\yangy\\Documents\\GitHub\\allinone\\python\\app_1\\simple.html'
+dir = 'C:\\Users\\king\\Documents\\GitHub\\allinone\\python\\app_1\\simple.html'
     
 with open(dir) as h_f:
     soup = BeautifulSoup(h_f, 'lxml')
