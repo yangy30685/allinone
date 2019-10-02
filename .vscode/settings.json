@@ -1,13 +1,13 @@
 {
-    "python.pythonPath": "C:\\Users\\king\\Anaconda3\\python.exe",
+    "python.pythonPath": "C:\\Users\\yangy\\Anaconda3\\python.exe",
     "editor.detectIndentation": true,
     "python.linting.pylintArgs": [ "----extension-pkg-whitelist=1xml"],
     "python.linting.pylintEnabled": true,
     "python.linting.banditEnabled": false,
     "python.linting.enabled": true,
-    "python.testing.pyTestArgs": ["python"],
+    "python.testing.pytestArgs": ["python"],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.pyTestEnabled": false,
+    "python.testing.pytestEnabled": false,
     "python.testing.promptToConfigure": false
 }
